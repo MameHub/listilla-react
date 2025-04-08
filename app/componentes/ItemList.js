@@ -1,9 +1,9 @@
 import Item from "./Item";
 
-export default function ItemList() {
+export default function ItemList({texto}) {
     return(
         <>
-            <Item/>
+            <Item texto/>
             <br/>
             <Item/>
             <br/>
