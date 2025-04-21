@@ -26,7 +26,7 @@ export default function main() {
       <hr/>
 
       <h2>5. Agrega un onClick a Item para mostrar un alert con el texto del item al hacer clic.</h2>
-      {/* </> */}
+      <Item/>
       <hr/>
 
       <h2>6. Modifica Item para que al hacer clic cambie su color entre negro y azul</h2>
