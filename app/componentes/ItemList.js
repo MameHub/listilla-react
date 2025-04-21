@@ -1,13 +1,13 @@
 import Item from "./Item";
 
-export default function ItemList({texto}) {
+export default function ItemList({texto1, texto2, texto3}) {
     return(
         <>
-            <Item texto/>
+            <Item text={texto1}/>
             <br/>
-            <Item/>
+            <Item text={texto2}/>
             <br/>
-            <Item/>
+            <Item text={texto3}/>
         </>
     );
 }

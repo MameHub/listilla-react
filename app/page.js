@@ -19,10 +19,10 @@ export default function main() {
       <hr/>
 
       <h2>4. Pasa diferentes textos desde ItemList a cada Item.</h2>
-      <ItemList>
-        <Item/>
-      </ItemList>
-      <ItemList text = {"Texto pasado como prop a ItemList 2."}/>
+      <ItemList
+        texto1 = "Primer texto introducido"
+        texto3 = "Tercer texto introducido manteniendo el segundo como predeterminado de Item"
+      />
       <hr/>
 
       <h2>5. Agrega un onClick a Item para mostrar un alert con el texto del item al hacer clic.</h2>
