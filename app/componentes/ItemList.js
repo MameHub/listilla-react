@@ -1,13 +1,38 @@
 import Item from "./Item";
+import { useState } from "react";
 
-export default function ItemList({texto1, texto2, texto3}) {
+export default function ItemList() {
+    const [texts, setTexts] = useState([
+        "Primer elemento texto",
+        "Segundo elemento texto",
+        "Tercer elemento texto"
+    ]);
+    const [inputText, setInputText] = useState("");
+    
+    const handleInput = e => {
+        setInputText(e.target.value);
+    }
+
+    const addText = () => {
+        setTexts([...texts, inputText]);
+        setInputText("");
+    };
+
+    const delText = () => {
+        texts.length > 0 ? setTexts(texts.slice(0, -1)) : null;
+    };
+
     return(
         <>
-            <Item text={texto1}/>
+            {texts.map((text, index) =>
+                <div key={index}>
+                    <Item text={text} />
+                </div>
+            )}
+            <input type="text" value={inputText} onChange={handleInput} placeholder="Introduce el nuevo texto"></input>
+            <button onClick={addText}>Añadir texto</button>
             <br/>
-            <Item text={texto2}/>
-            <br/>
-            <Item text={texto3}/>
+            <button onClick={delText}>Eliminar texto</button>
         </>
     );
 }
